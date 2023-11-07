@@ -7,14 +7,14 @@ let lines = '';
 form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const inputNotaActivity = document.getElementById('nota-activity');
     const inputNomeActivity = document.getElementById('nome-activity');
+    const inputNotaActivity = document.getElementById('nota-activity');
 
-
+    
     let line = '<tr>';
-    line += '<td>${inputNameActivity.value}</td>'; 
-    line += '<td>${inputNotaActivity.value}</td>';
-    line += '<td>${inputNotaActivity.value >=7 ? "Approved" : "disapproved"}</td>';
+    line += '<td> ${inputNomeActivity.value}</td>';
+    line += '<td> ${inputNotaActivity.value}</td>';
+    line += '<td> ${inputNotaActivity.value >= 7 ? imgApproved : imgDisapproved}</td>';
     line += '</tr>';
 
     lines += line;
@@ -22,7 +22,7 @@ form.addEventListener('submit', function(e) {
     const bodyTable = document.querySelector('tbody');
     bodyTable.innerHTML = lines;
 
-    inputNameActivity.value = '';
+    inputNomeActivity.value = '';
     inputNotaActivity.value = '';
 
 })
